@@ -34,7 +34,7 @@ RUN tar zxvf ruby-2.1.1.tar.gz && \
     ./configure --prefix=/usr --disable-install-doc --disable-install-rdoc && \
     make && make install && \
     cd .. && \
-    rm -rf ruby-2.1.2 && rm ruby-2.1.1.tar.gz
+    rm -rf ruby-2.1.1 && rm ruby-2.1.1.tar.gz
 
 # Never install rdoc ri
 RUN echo "gem: --no-ri --no-rdoc" > /etc/gemrc
