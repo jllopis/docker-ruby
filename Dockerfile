@@ -29,12 +29,12 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc
 # Install ruby from source
 ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz /tmp/
 WORKDIR /tmp
-RUN tar zxvf ruby-2.1.1.tar.gz && \
-    cd ruby-2.1.1 && \
+RUN tar zxvf ruby-$RUBY_VERSION.tar.gz && \
+    cd ruby-$RUBY_VERSION && \
     ./configure --prefix=/usr --disable-install-doc --disable-install-rdoc && \
     make && make install && \
     cd .. && \
-    rm -rf ruby-2.1.1 && rm ruby-2.1.1.tar.gz
+    rm -rf ruby-$RUBY_VERSION && rm ruby-$RUBY_VERSION.tar.gz
 
 # Never install rdoc ri
 RUN echo "gem: --no-ri --no-rdoc" > /etc/gemrc
