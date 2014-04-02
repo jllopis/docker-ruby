@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN locale-gen es_ES.UTF-8
 ENV LANG es_ES.UTF-8
 ENV LC_ALL es_ES.UTF-8
-ENV PATH /opt/app/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/app/bin
 
 ENV APP_ROOT /opt/app
 ENV RUBY_VERSION 2.1.1
