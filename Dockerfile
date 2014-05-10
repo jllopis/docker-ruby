@@ -27,7 +27,7 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc
     apt-get -qqy install libpq-dev postgresql-client-$PG_VERSION --no-install-recommends
 
 # Install ruby from source
-ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz /tmp/
+ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-$RUBY_VERSION.tar.gz /tmp/
 WORKDIR /tmp
 RUN tar zxvf ruby-$RUBY_VERSION.tar.gz && \
     cd ruby-$RUBY_VERSION && \
