@@ -42,4 +42,4 @@ RUN echo "gem: --no-ri --no-rdoc" > /etc/gemrc
 WORKDIR /
 
 # Install bundle
-RUN gem install --no-rdoc --no-ri bundler -v 1.5.3
+RUN gem install --no-rdoc --no-ri bundler -v 1.6.1
