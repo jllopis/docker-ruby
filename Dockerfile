@@ -21,7 +21,7 @@ RUN apt-get -qq update && \
 RUN apt-get -qqy install python-software-properties git unzip imagemagick curl build-essential zlib1g-dev libreadline6-dev libyaml-dev libssl-dev libxslt-dev libxml2-dev --no-install-recommends
 
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
-    curl -sL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
+    curl -ksL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
     apt-get -qq update ; \
     apt-get -qqy install libpq-dev postgresql-client-$PG_VERSION --no-install-recommends
 
