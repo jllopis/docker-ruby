@@ -11,7 +11,7 @@ ENV RUBY_VERSION 2.1.4
 ENV PG_VERSION 9.3
 
 # hopefully temporary work-around of http://git.io/Ke_Meg#1724
-#RUN apt-mark hold initscripts udev plymouth mountall
+RUN dpkg-divert --local --rename /usr/bin/ischroot && ln -sf /bin/true /usr/bin/ischroot
 
 # System upgrade
 RUN apt-get -qq update && \
