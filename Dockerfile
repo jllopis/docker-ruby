@@ -7,7 +7,6 @@ ENV LANG es_ES.UTF-8
 ENV LC_ALL es_ES.UTF-8
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/app/bin
 
-ENV APP_ROOT /opt/app
 ENV RUBY_VERSION 2.1.2
 ENV PG_VERSION 9.3
 
