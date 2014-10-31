@@ -3,7 +3,7 @@ Dockerfile for container with Ruby installed
 # Version
 
 Ruby 2.1.4
-Postgresql-client 9.4
+Postgresql-client 9.3
 
 This image is intended to be used as base image for Ruby based containers. It does not define a **CMD** or
 and **ENTRYPOINT**.
