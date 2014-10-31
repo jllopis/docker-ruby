@@ -8,7 +8,7 @@ ENV LC_ALL es_ES.UTF-8
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/app/bin
 
 ENV RUBY_VERSION 2.1.4
-ENV PG_VERSION 9.3
+ENV PG_VERSION 9.4
 
 # hopefully temporary work-around of http://git.io/Ke_Meg#1724
 RUN apt-mark hold initscripts udev plymouth mountall
