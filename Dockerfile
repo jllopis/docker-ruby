@@ -10,15 +10,11 @@ ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/app/b
 ENV RUBY_VERSION 2.1.4
 ENV PG_VERSION 9.3
 
-# hopefully temporary work-around of http://git.io/Ke_Meg#1724
-RUN dpkg-divert --local --rename /usr/bin/ischroot && ln -sf /bin/true /usr/bin/ischroot
-
 # System upgrade
 RUN apt-get -qq update && \
-    apt-get -qqy upgrade --no-install-recommends
 
 # Install dependencies
-RUN apt-get -qqy install python-software-properties git unzip imagemagick curl build-essential zlib1g-dev libreadline6-dev libyaml-dev libssl-dev libxslt-dev libxml2-dev --no-install-recommends
+    apt-get -qqy install python-software-properties git unzip imagemagick curl build-essential zlib1g-dev libreadline6-dev libyaml-dev libssl-dev libxslt-dev libxml2-dev --no-install-recommends
 
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
     curl -ksL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
